@@ -251,12 +251,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pliki/Arytmetyka stało- i zmiennoprzecinkowa.md",
+                "file": "pliki/Normalizacja schematu bazy danych.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arytmetyka stało- i zmiennoprzecinkowa"
+              "title": "Normalizacja schematu bazy danych"
             }
           },
           {
@@ -432,15 +432,15 @@
   },
   "active": "79f0a8153edb3c25",
   "lastOpenFiles": [
-    "pliki/Fizyczne nośniki danych – stosowane technologie, struktury oraz metody kodowania informacji.md",
+    "pliki/Mechanizmy systemu operacyjnego wspomagające synchronizację procesów.md",
+    "pliki/Język UML w projektowaniu oprogramowania.md",
     "pliki/Generowanie realistycznych obrazów scen 3-D za pomocą metody śledzenia promieni.md",
+    "pliki/Fizyczne nośniki danych – stosowane technologie, struktury oraz metody kodowania informacji.md",
+    "pliki/Arytmetyka stało- i zmiennoprzecinkowa.md",
     "PYTANIA.md",
     "pliki/Paradygmaty programowania obiektowego.md",
     "pliki/Ocena złożoności algorytmów.md",
     "pliki/Normalizacja schematu bazy danych.md",
-    "pliki/Mechanizmy systemu operacyjnego wspomagające synchronizację procesów.md",
-    "pliki/Język UML w projektowaniu oprogramowania.md",
-    "pliki/Arytmetyka stało- i zmiennoprzecinkowa.md",
     "pliki/Model warstwowy TCP IP.md",
     "obrazki",
     "obrazki/Zrzut ekranu 2026-01-7 o 13.15.43.png",
