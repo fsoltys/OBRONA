@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "PYTANIA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "PYTANIA"
             }
           }
         ]
@@ -179,11 +179,13 @@
   },
   "active": "9bd9863613945c64",
   "lastOpenFiles": [
-    "README.md",
+    "pliki/k2/k2 - opracowanie z dysku.md",
+    "PYTANIA.md",
+    "pliki/k2/Arytmetyka stało- i zmiennoprzecinkowa.md",
+    "pliki/k2/k2 - spowiedz.md",
     "pliki/k1/Paradygmaty programowania obiektowego.md",
     "pliki/k1/k1 - spowiedz.md",
     "pliki/k1/k1 - opracowanie z dysku.md",
-    "pliki/k2/Arytmetyka stało- i zmiennoprzecinkowa.md",
     "pliki/k10",
     "pliki/k9",
     "pliki/Untitled.canvas",

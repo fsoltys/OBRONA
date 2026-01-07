@@ -1,6 +1,6 @@
 PYTANIA KIERUNKOWE
 1. k1 ![[Paradygmaty programowania obiektowego]]
-2. [[Arytmetyka stało- i zmiennoprzecinkowa]].
+2. ![[Arytmetyka stało- i zmiennoprzecinkowa]].
 3. [[Normalizacja schematu bazy danych]].
 4. [[Model warstwowy TCP IP]].
 5. [[Ocena złożoności algorytmów]].
