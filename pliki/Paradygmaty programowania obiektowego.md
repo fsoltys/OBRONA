@@ -15,7 +15,7 @@ przerwano i dr Trajdos zapytał o
 to czy wiem czym jest reguła
 podstawień Liskov i żeby
 opowiedział trochę o tym.
-# opracowanko
+# opracowanko z dysku 
 ## Paradygmaty programowania obiektowego.
 
 Główne paradygmaty (filary) programowania obiektowego to: **Abstrakcja**, **Hermetyzacja (Enkapsulacja)**, **Dziedziczenie** i **Polimorfizm**. Służą one do tworzenia kodu, który jest łatwiejszy w utrzymaniu, modułowy i odwzorowuje rzeczywiste relacje biznesowe.​
