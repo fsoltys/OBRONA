@@ -1,0 +1,22 @@
+PYTANIA KIERUNKOWE
+1. [[Paradygmaty programowania obiektowego]].
+2. [[Arytmetyka stało- i zmiennoprzecinkowa]].
+3. [[Normalizacja schematu bazy danych]].
+4. [[Model warstwowy TCP IP]].
+5. [[Ocena złożoności algorytmów]].
+6. [[Język UML w projektowaniu oprogramowania]].
+7. [[Generowanie realistycznych obrazów scen 3-D za pomocą metody śledzenia promieni]].
+8. [[Mechanizmy systemu operacyjnego wspomagające synchronizację procesów]].
+9. [[Programowalne scalone układy cyfrowe PLD, CPLD oraz FPGA]].
+10. [[Fizyczne nośniki danych – stosowane technologie, struktury oraz metody kodowania informacji]].
+PYTANIA SPECJALNOŚCIOWE
+11. Struktury medycznych systemów informatycznych – porównanie, wady i zalety.
+12. Gromadzenie informacji medycznych – klasyfikacje, rekordy pacjenta.
+13. Metody tworzenia harmonogramu projektu.
+14. Zarządzanie ryzykiem i jakością w projekcie.
+15. Wymień składowe modelu matematycznego opisującego obraz cyfrowy wraz z krótkim ich opisem.
+16. Zadania i metody cyfrowego przetwarzania sygnałów i obrazów biomedycznych
+17. Modelowanie procesów farmakokinetycznych.
+18. Eksploracja danych medycznych.
+19. Prawne aspekty przetwarzania danych medycznych
+20. HTTP we wzorcu architektonicznym REST
