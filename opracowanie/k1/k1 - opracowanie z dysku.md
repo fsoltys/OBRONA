@@ -1,6 +1,10 @@
 # Paradygmaty programowania obiektowego.
 
-Główne paradygmaty (filary) programowania obiektowego to: **Abstrakcja**, **Hermetyzacja (Enkapsulacja)**, **Dziedziczenie** i **Polimorfizm**. Służą one do tworzenia kodu, który jest łatwiejszy w utrzymaniu, modułowy i odwzorowuje rzeczywiste relacje biznesowe.​
+Programowanie obiektowe to paradygmat programowania, w którym programy definiuje się za pomocą obiektów - elementów łączących stan (czyli dane, nazywane najczęściej atrybutami) i zachowanie (czyli procedury, tu: metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.
+
+Podejście to różni się od tradycyjnego programowania proceduralnego, gdzie dane i procedury nie są ze sobą bezpośrednio związane. Programowanie obiektowe ma ułatwić pisanie, konserwację i wielokrotne użycie programów lub ich fragmentów
+
+Główne założenia programowania obiektowego to: **Abstrakcja**, **Hermetyzacja (Enkapsulacja)**, **Dziedziczenie** i **Polimorfizm**. Służą one do tworzenia kodu, który jest łatwiejszy w utrzymaniu, modułowy i odwzorowuje rzeczywiste relacje biznesowe.​
 
 ---
 ## 1. Abstrakcja (Abstraction)
@@ -14,16 +18,21 @@ Modelowanie problemu poprzez ukrywanie zbędnych detali implementacyjnych i eksp
 
 ## 2. Hermetyzacja / Enkapsulacja (Encapsulation)
 
-Ukrywanie wewnętrznego stanu obiektu i wymuszanie dostępu do niego wyłącznie przez publiczne metody (interfejs). Często definiowana jako "wiązanie danych z metodami, które na nich operują".
+Polega na ukrywaniu pewnych danych składowych oraz metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym. Takie podejście zapewnia, że obiekt nie może zmieniać stanu wewnętrznego innych obiektów w nieoczekiwany sposób. Tylko własne metody obiektu są uprawnione do zmiany jego stanu. Każdy typ obiektu prezentuje innym obiektom swój interfejs, który określa dopuszczalne metody współpracy.
 - **Cel:** Ochrona integralności danych (invariants) i zmniejszenie sprzężenia (coupling).
 - **Niuanse definicyjne:**
     - W ścisłej teorii **Enkapsulacja** to łączenie danych i zachowań w jedną "kapsułę" (klasę).
     - **Hermetyzacja** to ukrywanie danych (modyfikatory dostępu: `private`, `protected`). W praktyce te pojęcia są używane zamiennie.​
 - **W praktyce:** Pola są `private`, a dostęp odbywa się przez gettery/settery (choć lepiej przez metody biznesowe, np. `bankAccount.withdraw(50)` zamiast `setBalance(getBalance() - 50)`). Dzięki temu, jeśli zmienisz sposób przechowywania danych (np. z `int` na `BigDecimal`), nie zepsujesz kodu w innych częściach systemu.
 
+Modyfikatory:
+- private - dostęp tylko w obrębie danej klasy
+- protected - dostęp również po klasie po niej dziedziczące
+- public - dostęp do danych w każdym miejscu programu, gdzie dostępny jest obiekt
+
 ## 3. Dziedziczenie (Inheritance)
 
-Mechanizm pozwalający jednej klasie (potomnej) przejąć cechy i metody innej klasy (bazowej). Tworzy relację typu "jest czymś" (IS-A).
+Współdzielenie funkcjonalności pomiędzy klasami. Klasa "dziecka" może mieć swoje funkcjonalności oraz otrzymać funkcjonalności "rodzica" po którym dziedziczy. Z jednej klasy "rodzica" można uzyskać wiele klas potomnych. 
 - **Cel:** Ponowne użycie kodu (Reusability) i tworzenie hierarchii.
 - **Pułapka (Ważne na 5.0):** Dziedziczenie jest silnym sprzężeniem (tight coupling). Zmiana w klasie bazowej może zepsuć klasy potomne (problem kruchej klasy bazowej).
 - **Zasada Liskov (LSP z SOLID):** Klasa dziedzicząca musi móc zastąpić klasę bazową bez psucia działania programu. Jeśli musisz w podklasie rzucać wyjątek `NotImplementedException`, prawdopodobnie łamiesz zasadę dziedziczenia.
