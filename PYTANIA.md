@@ -18,5 +18,5 @@ PYTANIA SPECJALNOŚCIOWE
 16. Zadania i metody cyfrowego przetwarzania sygnałów i obrazów biomedycznych
 17. ![[Modelowanie procesów farmakokinetycznych]]
 18. Eksploracja danych medycznych.
-19. Prawne aspekty przetwarzania danych medycznych
+19. ![[Prawne aspekty przetwarzania danych medycznych]]
 20. HTTP we wzorcu architektonicznym REST
