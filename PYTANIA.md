@@ -14,8 +14,8 @@ PYTANIA SPECJALNOŚCIOWE
 12. ![[Gromadzenie informacji medycznych - klasyfikacje, rekordy pacjenta]]
 13. Metody tworzenia harmonogramu projektu.
 14. Zarządzanie ryzykiem i jakością w projekcie.
-15. ![[Wymień składowe modelu matematycznego opisującego obraz cyfrowy wraz z krótkim ich opisem]].
-16. Zadania i metody cyfrowego przetwarzania sygnałów i obrazów biomedycznych
+15. ![[Wymień składowe modelu matematycznego opisującego obraz cyfrowy wraz z krótkim ich opisem]]
+16. ![[Zadania i metody cyfrowego przetwarzania sygnałów i obrazów biomedycznych]]
 17. ![[Modelowanie procesów farmakokinetycznych]]
 18. Eksploracja danych medycznych.
 19. ![[Prawne aspekty przetwarzania danych medycznych]]
