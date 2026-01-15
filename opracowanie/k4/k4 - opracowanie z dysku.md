@@ -1,7 +1,7 @@
 # Model warstwowy TCP/IP.
 ## 1. Definicja i Architektura
 
-Model TCP/IP (Transmission Control Protocol / Internet Protocol) to **czterowarstwowy** model odniesienia, który jest standardem przemysłowym dla Internetu. W przeciwieństwie do modelu ISO/OSI (który jest modelem _koncepcyjnym_), TCP/IP jest modelem _implementacyjnym_.
+Model TCP/IP (Transmission Control Protocol / Internet Protocol) to **czterowarstwowy** model odniesienia, który jest standardem przemysłowym dla Internetu. W przeciwieństwie do modelu ISO/OSI (który jest modelem _koncepcyjnym_), TCP/IP jest modelem _implementacyjnym_. Sam model jak i zestaw protokołów TCP/IP został zaprojektowany w otwartej architekturze i nie jest ograniczony żadnymi patentami ani prawami autorskimi.
 
 **Kluczowa cecha inżynierska:** Niezależność od medium transmisyjnego (może działać na światłowodzie, miedzi, falach radiowych) oraz niezależność od sprzętu.
 
@@ -17,11 +17,12 @@ Odpowiada za interfejs między użytkownikiem a siecią oraz kodowanie danych. W
 - **Protokoły i porty (Well-known ports):**
     - **SSH (22):** Szyfrowana sesja terminalowa.
     - **DNS (53):** Rozwiązywanie nazw domenowych (UDP dla zapytań, TCP dla transferu stref).
+    - **SMTP ( )**: 
     - **HTTP/HTTPS (80/443):** Transfer hipertekstu.
 - **Jednostka danych:** Dane (Data) / Strumień (Stream).
 
 ## **II. Warstwa Transportowa (Transport Layer)**
-Zapewnia logiczną komunikację **End-to-End** (między procesami na hostach, a nie między samymi hostami).
+Warstwa zapewniająca kanał komunikacyjny między poszczególnymi aplikacjami na komunikujących się ze sobą urządzeniach, dzieląca dane na segmenty po stronie nadawczej i składająca po stronie odbiorczej, kierująca do każdej z aplikacji ruch sieciowy na podstawie przypisanego jej numeru portu. Analogicznie w modelu OSI istnieje warstwa transportowa z takimi samymi zadaniami.
 - **Kluczowe mechanizmy:**
     - **Multipleksacja:** Użycie **numerów portów** (16-bitowych, 0-65535) do rozróżniania usług uruchomionych na tym samym IP.
     - **Kontrola przepływu (Flow Control):** Mechanizm **Sliding Window** (Okno przesuwne) w TCP – odbiorca informuje nadawcę, ile danych może jeszcze przyjąć (pole `Window Size` w nagłówku), by nie przepełnić bufora.
@@ -36,8 +37,7 @@ Zapewnia logiczną komunikację **End-to-End** (między procesami na hostach, 
 - **Jednostka danych:** Segment (TCP) / Datagram (UDP).
 
 ## **III. Warstwa Internetowa (Internet Layer)**
-Odpowiada za logiczne adresowanie (IP) i routing (wybór trasy) pakietów przez różne sieci (Inter networking). Działa w trybie "best-effort" (nie gwarantuje dostarczenia – to rola wyższej warstwy TCP).
-
+Odpowiada za logiczne adresowanie (IP) i routing (wybór trasy) pakietów przez różne sieci (Inter networking). Działa w trybie "best-effort" (nie gwarantuje dostarczenia – to rola wyższej warstwy TCP). Stanowi odpowiednik warstwy sieciowej modelu OSI.
 - **Protokoły:**
     - **IP (IPv4 / IPv6):**
         - **IPv4:** Adres 32-bitowy. Nagłówek zawiera m.in. `TTL` (Time To Live) – licznik, który zmniejsza się o 1 na każdym routerze. Gdy osiągnie 0, pakiet jest odrzucany (zapobiega pętlom w routingu).
@@ -45,10 +45,8 @@ Odpowiada za logiczne adresowanie (IP) i routing (wybór trasy) pakietów przez 
     - **ICMP (Internet Control Message Protocol):** Protokół diagnostyczny (używany przez `ping` i `traceroute`). Zgłasza błędy (np. "Destination Unreachable", "TTL Exceeded").
     - **ARP (Address Resolution Protocol):** Mapuje logiczny adres IP na fizyczny adres MAC w sieci lokalnej (działa na granicy warstwy 2 i 3).
 - **Jednostka danych:** Pakiet (Packet).
-    
 
 ## **IV. Warstwa Dostępu do Sieci (Network Access Layer)**
-
 Najniższa warstwa, odpowiadająca za fizyczne przesłanie bitów do medium i sterowanie dostępem do tego medium (MAC - Media Access Control). W modelu OSI odpowiada warstwom Łącza Danych i Fizycznej.
 - **Zadania:**
     - Adresowanie fizyczne (Adres MAC – 48-bitowy).
@@ -56,6 +54,8 @@ Najniższa warstwa, odpowiadająca za fizyczne przesłanie bitów do medium i st
     - Framing (oznaczanie początku i końca ramki).
 - **Technologie:** Ethernet (IEEE 802.3), Wi-Fi (IEEE 802.11).
 - **Jednostka danych:** Ramka (Frame).
+
+Każda z warstw jest niezależna od pozostałych. Przykładowo, na poziomie warstwy aplikacji po drugiej stronie łącza widoczna jest bezpośrednio aplikacja, z którą zostało nawiązane połączenie, niezależnie od trasy pokonywanej przez pakiety w warstwie internetowej. Z kolei z perspektywy warstwy internetowej po przeciwnej stronie łącza znajduje się następne urządzenie na trasie posiadające adres IP, niezależnie od fizycznej struktury sieci i przykładowo liczby przełączników, jakie musi pokonać ramka przenosząca pakiet IP. Dzięki temu można łatwo wykorzystać w sieci różne technologie i z punktu widzenia wyższych warstw nie ma na przykład znaczenia, czy fizycznie transmisja odbywa się kablem w standardzie Ethernet, czy bezprzewodowo w jednym ze standardów Wi-Fi – dowolny rodzaj danych da się przesłać dowolnym łączem.
 
 ---
 ## 3. Proces Enkapsulacji (Szczegóły nagłówków)
