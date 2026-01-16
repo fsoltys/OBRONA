@@ -12,7 +12,7 @@ PYTANIA KIERUNKOWE
 PYTANIA SPECJALNOŚCIOWE
 11. ![[Struktury medycznych systemów informatycznych – porównanie, wady i zalety.]]
 12. ![[Gromadzenie informacji medycznych - klasyfikacje, rekordy pacjenta]]
-13. Metody tworzenia harmonogramu projektu.
+13. ![[Metody tworzenia harmonogramu projektu.]]
 14. Zarządzanie ryzykiem i jakością w projekcie.
 15. ![[Wymień składowe modelu matematycznego opisującego obraz cyfrowy wraz z krótkim ich opisem]]
 16. ![[Zadania i metody cyfrowego przetwarzania sygnałów i obrazów biomedycznych]]
